@@ -1,6 +1,9 @@
 # demo
 
-> A Vue.js project
+> scratch job techniques from boss zhipin, save to database, and show them through web. （A Vue.js Project）
+> Front end is vue.js project, including v-charts bar component, 
+> Back end is websocket server, which query data form mongodb through ORM mongoose every period, pushing summary data to front end(v-chart bar)
+> data picker use scrapy to search zhipin site to save to mongodb （to be implement）
 
 ## Build Setup
 
