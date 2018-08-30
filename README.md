@@ -17,6 +17,9 @@ npm run dev
 # start websocket server
 npm run websocket
 
+# start webservice restfull api server
+npm run webservice
+
 # build for production with minification
 npm run build
 
