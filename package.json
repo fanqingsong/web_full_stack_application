@@ -8,12 +8,14 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "websocket": "node build/websocket_server.js",
+    "webservice": "node build/webservice_restify.js",
     "build": "node build/build.js",
     "mongo-express": "cd node_modules/mongo-express/ && node app.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "echarts": "^4.1.0",
+    "express-restify-mongoose": "^5.0.0",
     "mongoose": "^5.2.9",
     "socket.io": "^2.1.1",
     "v-charts": "^1.17.8",
