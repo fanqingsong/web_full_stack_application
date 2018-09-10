@@ -10,6 +10,16 @@
         <ve-line :data="chartData"></ve-line>
     </div>
     -->
+
+      <hr>
+      <h1>blow is quotes list</h1>
+
+      <ul>
+        <li v-for="(item, index) in quoteData.quotes">
+            {{item.author}}:<br>
+            {{item.text}}
+        </li>
+      </ul>
   </div>
 </template>
 
@@ -29,7 +39,8 @@ export default {
     components: { VeLine, VeBar, VeHistogram },
     data () {
         return {
-            chartData: {}
+            chartData: {},
+            quoteData: {}
         }
     },
     created: function(){
@@ -38,6 +49,13 @@ export default {
         socket.on('chartData', (data) => {
             console.log('chartData message = '+data)
             this.chartData = JSON.parse(data)
+        } );
+
+        const socket2 = io('http://localhost:8082');
+        socket2.send('hello world');
+        socket2.on('quoteData', (data) => {
+            console.log('quoteData message = '+data)
+            this.quoteData = JSON.parse(data)
         } );
     },
     mounted: function(){

@@ -53,7 +53,7 @@ ROBOTSTXT_OBEY = True
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-   'scratch_zhipin.middlewares.user_agent_middlewares.RandomUserAgentMiddlware': 543,
+   'scratch_zhipin.MidWare.user_agent_middlewares.RandomUserAgentMiddlware': 543,
    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware':None,
 }
 
@@ -65,9 +65,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'scratch_zhipin.pipelines.ScratchZhipinPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'scratch_zhipin.pipelines.ScratchZhipinPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -92,5 +92,5 @@ DOWNLOADER_MIDDLEWARES = {
 
 RANDOM_UA_TYPE = 'random'##random    chrome
 
-
+HTTPERROR_ALLOWED_CODES = [403]#上面报的是403，就把403加入。
 
