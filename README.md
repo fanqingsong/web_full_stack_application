@@ -1,9 +1,10 @@
-# demo
+# show full stack technology applications (Scrapy webservice[restful] websocket VueJS MongoDB)
 
-> scratch job techniques from scrapy offical demo site, save to database(MongoDB), and show them through web. （A Vue.js Project）
+> scratch job techniques from scrapy offical demo site, save to database(MongoDB), and show them through web,
 > Front end is vue.js project, including WebSocket client(socketio) component, 
 > Back end is websocket server, which query data form MongoDB through ORM mongoose every period(1s), pushing quotes data to front end,
 > data picker use scrapy to crawl quotes to save to MongoDB
+
 
 ## Build Setup
 
@@ -25,7 +26,6 @@ cd scrapy && pip install -r requirement.txt
 
 # start scrapy
 scrapy crawl quotes
-
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
