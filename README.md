@@ -1,4 +1,4 @@
-# show full stack technology applications : Scrapy webservice[restful] websocket VueJS MongoDB
+# show full stack technology applications : Scrapy + webservice[restful] + websocket + VueJS + MongoDB
 
 1. scratch job techniques from scrapy offical demo site(quotes), save to database(MongoDB), and show them through web.
 2. Front end is vue.js project, including WebSocket client(socketio) component.
