@@ -7,9 +7,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "websocket": "node build/websocket_server.js",
     "websocket_quotes": "node build/websocket_server_quotes.js",
-    "webservice": "node build/webservice_restify.js",
     "webservice_quotes": "node build/webservice_restify_quotes.js",
     "build": "node build/build.js",
     "mongo-express": "cd node_modules/mongo-express/ && node app.js"
