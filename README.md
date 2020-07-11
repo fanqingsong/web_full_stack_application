@@ -1,6 +1,6 @@
 # show full stack technology applications : Scrapy + webservice[restful] + websocket + VueJS + MongoDB
 
-1. scratch job techniques from scrapy offical demo site(quotes), save to database(MongoDB), and show them through web.
+1. scratch quotes from scrapy offical demo site(quotes), save to database(MongoDB), and show them through web.
 2. Front end is vue.js project, including WebSocket client(socketio) component.
 3. Back end is websocket server, which query data form MongoDB through ORM mongoose every period(1s), pushing quotes data to front end.
 4. data picker use scrapy to crawl quotes to save to MongoDB.
