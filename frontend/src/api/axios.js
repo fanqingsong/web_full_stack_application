@@ -2,7 +2,6 @@ import axios from 'axios'
 
 const baseURL = ''
 
-
 const instance = axios.create()
 
 instance.defaults.timeout = 30000 // 所有接口30s超时
@@ -13,7 +12,7 @@ instance.interceptors.request.use(async config => {
     config.url = `${baseURL}${config.url}`
   }
   console.log("config.url="+config.url)
-console.log("------in instance.interceptors.request.use -----")
+  console.log("------in instance.interceptors.request.use -----")
   return config
 }, error => Promise.reject(error))
 

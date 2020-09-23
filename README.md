@@ -12,6 +12,10 @@ features:
 
 ---
 
+## Demo
+
+![page](snapshot.png)
+
 ## workflow
 
 1. scratch quotes from scrapy offical demo site(quotes), save to database(MongoDB), and show them through web.
@@ -36,24 +40,36 @@ Scrapy + webservice[restful] + websocket + VueJS + MongoDB
 
 ---
 
+## Install
+
+``` bash
+
+./bin/install.sh
+
+```
+
 ## Run
 
 ``` bash
-# install nodejs dependencies
-npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
+./bin/start_vuedev.sh
+
+./bin/start_mongod.sh
 
 # start websocket server
-npm run websocket_quotes
+./bin/start_websocket_server.sh
 
 # start webservice restfull api server
-npm run webservice_quotes
-
-# install python dependencies
-cd scrapy && pip install -r requirement.txt
+./bin/start_restapi.sh
 
 # start scrapy
-scrapy crawl quotes
+./bin/start_scrapy.sh
 ```
+
+
+## Reference
+- [ ] [mongodb install](https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu-18.04/)
+
+
+

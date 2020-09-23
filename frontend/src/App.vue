@@ -1,39 +1,25 @@
 <template>
   <div>
+    <h1>below is techs update</h1>
     <ve-histogram :data="chartData"></ve-histogram>
+    <hr>
 
-    <!--
-    <div>
-        <ve-bar :data="chartData"></ve-bar>
-    </div>
-    <div>
-        <ve-line :data="chartData"></ve-line>
-    </div>
-    -->
-
-      <hr>
-      <h1>blow is quotes list</h1>
-
-      <ul>
+    <h1>below is quotes list</h1>
+    <ul>
         <li v-for="(item, index) in quoteData.quotes">
             {{item.author}}:<br>
             {{item.text}}
         </li>
-      </ul>
+    </ul>
   </div>
 </template>
 
 <script>
-
 import VeLine from 'v-charts/lib/line.common'
-
 import VeBar from 'v-charts/lib/bar.common'
-
 import VeHistogram from 'v-charts/lib/histogram.common'
-
 import axios from 'axios'
-
-import io from 'socket.io-client';
+import io from 'socket.io-client'
 
 export default {
     components: { VeLine, VeBar, VeHistogram },
@@ -59,23 +45,8 @@ export default {
         } );
     },
     mounted: function(){
-
         let _this = this
-
         console.log(" mounted! ")
-
-        // axios.get('/data/map.json')
-        // .then(function(response) {
-        //     console.log("------------sss")
-        //     console.log(response.data);
-        //     console.log(response.status);
-        //     console.log(response.statusText);
-        //     console.log(response.headers);
-        //     console.log(response.config);
-        //     console.log("------------sssssddds")
-        //     _this.chartData = response.data
-        // });
     },
-
 }
 </script>
