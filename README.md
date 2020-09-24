@@ -51,17 +51,11 @@ Scrapy + webservice[restful] + websocket + VueJS + MongoDB
 ## Run
 
 ``` bash
+# run all services
+./bin/start.sh
 
-# serve with hot reload at localhost:8080
-./bin/start_vuedev.sh
-
-./bin/start_mongod.sh
-
-# start websocket server
-./bin/start_websocket_server.sh
-
-# start webservice restfull api server
-./bin/start_restapi.sh
+# stop all services
+./bin/stop.sh
 
 # start scrapy
 ./bin/start_scrapy.sh
@@ -69,7 +63,7 @@ Scrapy + webservice[restful] + websocket + VueJS + MongoDB
 
 
 ## Reference
-- [ ] [mongodb install](https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu-18.04/)
+- [x] [mongodb install](https://www.howtoforge.com/tutorial/install-mongodb-on-ubuntu-18.04/)
 
 
 
