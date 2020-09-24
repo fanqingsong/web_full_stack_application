@@ -1,5 +1,8 @@
 
+cd backend/scrapy/scratch_zhipin
 
-scrapy runspider quotes_spider.py
+scrapy crawl quotes
+
+cd -
 
 

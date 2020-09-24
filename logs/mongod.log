@@ -70,3 +70,4 @@
 2020-09-24T12:09:49.840+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:52092 conn: { driver: { name: "nodejs", version: "3.1.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.4.0-17763-Microsoft" }, platform: "Node.js v8.10.0, LE, mongodb-core: 3.1.2" }
 2020-09-24T12:09:54.515+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:52110 #2 (2 connections now open)
 2020-09-24T12:09:54.521+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:52110 conn: { driver: { name: "nodejs", version: "3.1.3" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.4.0-17763-Microsoft" }, platform: "Node.js v8.10.0, LE, mongodb-core: 3.1.2" }
+2020-09-24T12:22:20.383+0800 I NETWORK  [listener] connection accepted from 127.0.0.1:53015 #3 (3 connections now open)

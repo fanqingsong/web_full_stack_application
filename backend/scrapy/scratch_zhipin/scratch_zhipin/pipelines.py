@@ -8,6 +8,8 @@
 
 import requests
 
+from pprint import pprint
+
 class ScratchZhipinPipeline(object):
     def process_item(self, item, spider):
 
@@ -18,8 +20,9 @@ class ScratchZhipinPipeline(object):
 
         # save to db through web service
         resp = requests.post('http://localhost:3001/api/v1/quote', json=item)
-        if resp.status_code != 201:
-            raise ApiError('POST /item/ {}'.format(resp.status_code))
+        pprint(resp)
+        # if resp.status_code != 201:
+        #     raise ApiError('POST /item/ {}'.format(resp.status_code))
         print(resp.text)
         print('Created Technology. ID: {}'.format(resp.json()["_id"]))
 
