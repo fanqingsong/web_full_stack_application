@@ -1,0 +1,14 @@
+nohup: ignoring input
+2020-09-24T11:56:50.829+0800 I CONTROL  [initandlisten] MongoDB starting : pid=138 port=27017 dbpath=/data/db 64-bit host=CN-00015440
+2020-09-24T11:56:50.829+0800 I CONTROL  [initandlisten] db version v3.6.3
+2020-09-24T11:56:50.830+0800 I CONTROL  [initandlisten] git version: 9586e557d54ef70f9ca4b43c26892cd55257e1a5
+2020-09-24T11:56:50.830+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-09-24T11:56:50.830+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2020-09-24T11:56:50.830+0800 I CONTROL  [initandlisten] modules: none
+2020-09-24T11:56:50.830+0800 I CONTROL  [initandlisten] build environment:
+2020-09-24T11:56:50.830+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2020-09-24T11:56:50.830+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-09-24T11:56:50.830+0800 I CONTROL  [initandlisten] options: {}
+2020-09-24T11:56:50.835+0800 I STORAGE  [initandlisten] exception in initAndListen: DBPathInUse: Unable to lock the lock file: /data/db/mongod.lock (Resource temporarily unavailable). Another mongod instance is already running on the /data/db directory, terminating
+2020-09-24T11:56:50.835+0800 I CONTROL  [initandlisten] now exiting
+2020-09-24T11:56:50.835+0800 I CONTROL  [initandlisten] shutting down with code:100

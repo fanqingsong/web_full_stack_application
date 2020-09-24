@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1>below is techs update</h1>
+    <h1>Technology Bargram</h1>
     <ve-histogram :data="chartData"></ve-histogram>
     <hr>
 
-    <h1>below is quotes list</h1>
+    <h1>Quotes List</h1>
     <ul>
         <li v-for="(item, index) in quoteData.quotes">
             {{item.author}}:<br>

@@ -1,0 +1,32 @@
+2020-09-24T11:54:39.387+0800 I CONTROL  [initandlisten] MongoDB starting : pid=107 port=27017 dbpath=/data/db 64-bit host=CN-00015440
+2020-09-24T11:54:39.393+0800 I CONTROL  [initandlisten] db version v3.6.3
+2020-09-24T11:54:39.393+0800 I CONTROL  [initandlisten] git version: 9586e557d54ef70f9ca4b43c26892cd55257e1a5
+2020-09-24T11:54:39.393+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2020-09-24T11:54:39.393+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2020-09-24T11:54:39.393+0800 I CONTROL  [initandlisten] modules: none
+2020-09-24T11:54:39.393+0800 I CONTROL  [initandlisten] build environment:
+2020-09-24T11:54:39.394+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2020-09-24T11:54:39.394+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-09-24T11:54:39.396+0800 I CONTROL  [initandlisten] options: {}
+2020-09-24T11:54:39.398+0800 W -        [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2020-09-24T11:54:39.407+0800 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-09-24T11:54:39.408+0800 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2020-09-24T11:54:39.408+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=15793M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2020-09-24T11:54:40.533+0800 I STORAGE  [initandlisten] WiredTiger message [1600919680:533280][107:0x7fcaab1710c0], txn-recover: Main recovery loop: starting at 7/26752
+2020-09-24T11:54:40.544+0800 I STORAGE  [initandlisten] WiredTiger message [1600919680:544824][107:0x7fcaab1710c0], txn-recover: Recovering log 7 through 8
+2020-09-24T11:54:40.633+0800 I STORAGE  [initandlisten] WiredTiger message [1600919680:633115][107:0x7fcaab1710c0], txn-recover: Recovering log 8 through 8
+2020-09-24T11:54:40.765+0800 I CONTROL  [initandlisten] 
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] 
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2020-09-24T11:54:40.766+0800 I CONTROL  [initandlisten] 
+2020-09-24T11:54:40.783+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2020-09-24T11:54:40.785+0800 I NETWORK  [initandlisten] waiting for connections on port 27017
+2020-09-24T11:54:41.021+0800 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
