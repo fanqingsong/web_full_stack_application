@@ -16,7 +16,29 @@ features:
 
 ![page](snapshot.png)
 
-## workflow
+## Architecture
+
+```
++-----------+                 +------------+              +------------+               +--------------+
+|           |      frontend   |            |              |            |      data     |              |
+|   Browser +<----------------+  Vue Server|              |   RestAPI  +<--------------+    Scrapy    |
+|           |                 |            |              |            |               |              |
++------+----+                 +------------+              +------+-----+               +--------------+
+       ^                                                         |
+       |                                                         |
+       |                                                         |data
+       |                                                         |
+       |                                                         |
+       |                                                         v
+       |                     +-------------+              +------+------+
+       |     data            |             |    data      |             |
+       +---------------------+  Websocket  +<-------------+   MongoDB   |
+                             |             |              |             |
+                             +-------------+              +-------------+
+
+```
+
+## Workflow
 
 1. scratch quotes from scrapy offical demo site(quotes), save to database(MongoDB), and show them through web.
 2. Front end is vue.js project, including WebSocket client(socketio) component.
@@ -26,7 +48,7 @@ features:
 
 ---
 
-## technology stack
+## Technology Stack
 
 Scrapy + webservice[restful] + websocket + VueJS + MongoDB
 
