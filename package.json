@@ -10,7 +10,7 @@
         "mongo-express": "cd node_modules/mongo-express/ && node app.js"
     },
     "dependencies": {
-        "axios": "^0.18.0",
+        "axios": "^0.21.1",
         "echarts": "^4.1.0",
         "express-restify-mongoose": "^5.0.0",
         "mongoose": "^5.2.9",
