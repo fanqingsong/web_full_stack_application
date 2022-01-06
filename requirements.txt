@@ -6,7 +6,7 @@ asyncio==3.4.3
 Babel==2.8.0
 beautifulsoup4==4.9.1
 billiard==3.6.3.0
-celery==4.4.7
+celery==5.2.2
 certifi==2020.6.20
 cffi==1.14.2
 chardet==3.0.4
