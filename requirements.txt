@@ -41,7 +41,7 @@ packaging==20.4
 pbr==5.5.0
 pycparser==2.20
 Pygments==2.6.1
-PyJWT==1.7.1
+PyJWT==2.4.0
 pyparsing==2.4.7
 python-engineio==3.13.1
 python-socketio==4.6.0
