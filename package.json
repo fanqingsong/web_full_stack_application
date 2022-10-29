@@ -14,11 +14,11 @@
         "echarts": "^4.1.0",
         "express-restify-mongoose": "^5.0.0",
         "mongoose": "^5.2.9",
-        "socket.io": "^2.1.1",
+        "socket.io": "^2.5.0",
         "v-charts": "^1.17.8",
         "vue": "^2.5.2",
         "vue-router": "^3.0.1",
-        "vue-socket.io": "^1.0.2"
+        "vue-socket.io": "^3.0.10"
     },
     "devDependencies": {
         "autoprefixer": "^7.1.2",
