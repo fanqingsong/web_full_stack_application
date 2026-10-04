@@ -9,7 +9,7 @@ const router = express.Router()
 app.use(bodyParser.json())
 app.use(methodOverride())
 
-mongoose.connect('mongodb://localhost:27017/zhipin')
+mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost:27017/zhipin')
 
 restify.serve(router, mongoose.model('quote', new mongoose.Schema({
     author : { type: String },                    // 作者

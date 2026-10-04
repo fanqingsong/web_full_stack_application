@@ -6,9 +6,13 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
+import os
+
 import requests
 
 from pprint import pprint
+
+QUOTE_API_URL = os.environ.get('QUOTE_API_URL', 'http://localhost:3001/api/v1/quote')
 
 class ScratchZhipinPipeline(object):
     def process_item(self, item, spider):
@@ -19,7 +23,7 @@ class ScratchZhipinPipeline(object):
         print("--------------------")
 
         # save to db through web service
-        resp = requests.post('http://localhost:3001/api/v1/quote', json=item)
+        resp = requests.post(QUOTE_API_URL, json=item)
         pprint(resp)
         # if resp.status_code != 201:
         #     raise ApiError('POST /item/ {}'.format(resp.status_code))

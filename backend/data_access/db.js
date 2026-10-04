@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    DB_URL = 'mongodb://localhost:27017/zhipin';
+    DB_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/zhipin';
 
 /**
  * 连接

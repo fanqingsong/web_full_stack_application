@@ -1,0 +1,88 @@
+x-node: &node
+  image: quotes-dashboard-node
+  build:
+    context: .
+    dockerfile: docker/node/Dockerfile
+
+services:
+  mongo:
+    image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/mongo:4.4
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongo", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+  restapi:
+    <<: *node
+    command: ["node", "backend/webservice_restify_quotes.js"]
+    environment:
+      MONGO_URL: mongodb://mongo:27017/zhipin
+    ports:
+      - "3001:3001"
+    depends_on:
+      mongo:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "require('http').get('http://127.0.0.1:3001/api/v1/quote',r=>process.exit(r.statusCode<500?0:1)).on('error',()=>process.exit(1))",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    restart: unless-stopped
+
+  ws-quotes:
+    <<: *node
+    command: ["node", "backend/websocket_server_quotes.js"]
+    environment:
+      MONGO_URL: mongodb://mongo:27017/zhipin
+    ports:
+      - "8082:8082"
+    depends_on:
+      mongo:
+        condition: service_healthy
+    restart: unless-stopped
+
+  ws-chart:
+    <<: *node
+    command: ["node", "backend/websocket_server_mock_data.js"]
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+
+  frontend:
+    <<: *node
+    command: ["npm", "run", "dev", "--prefix", "frontend"]
+    environment:
+      HOST: 0.0.0.0
+      PORT: "8080"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  scrapy:
+    image: quotes-dashboard-scrapy
+    build:
+      context: .
+      dockerfile: docker/scrapy/Dockerfile
+    environment:
+      QUOTE_API_URL: http://restapi:3001/api/v1/quote
+    depends_on:
+      restapi:
+        condition: service_healthy
+    restart: "no"
+
+volumes:
+  mongo-data:
